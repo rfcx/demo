@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+// Set your brand colors
+$green: #31984F;
+$pre-black: #141525;
+$dark-grey: #232436;
+$blue-darken: #292a3b;
+$charcoal-grey: #45485D;
+$white: #ffffff;
+$pre-white: #edf1f2;
+
+// Update Bulma's global variables
+$family-sans-serif: "Lato", sans-serif;
+$primary: $green;
+$link: $green;
+$scheme-main: $dark-grey;
+$border: $charcoal-grey;
+$text-strong: $pre-white;
+$link-hover: $white;
+
+// Update some of Bulma's component variables
+$body-background-color: $pre-black;
+
+// Update navbar variables
+$navbar-background-color: $dark-grey;
+$navbar-item-color: $white;
+$navbar-item-hover-color: $white;
+$navbar-item-hover-background-color: $blue-darken;
+$navbar-item-active-color: $white;
+$navbar-dropdown-arrow: $white;
+$navbar-divider-background-color: $charcoal-grey;
+$navbar-dropdown-item-hover-color: $white;
+$navbar-dropdown-item-hover-background-color: $blue-darken;
+$navbar-padding-vertical: 0.5rem;
+$navbar-padding-horizontal: 0.5rem;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+
+.navbar-title {
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+.navbar-brand img {
+  max-height: 2rem;
+}
+
+.navbar-item.is-active {
+  border-bottom-color: $green;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  padding-bottom: calc(0.5rem - 3px);
+}
+
+.navbar-end {
+  margin-right: 0.2rem;
+}
+
+img.is-rounded {
+  border-radius: 290486px;
+}
+
+.element-title {
+  padding: 1rem;
+  color: #ccc;
+  font-size: 12px;
+}
+
+// Mobile view
+
+.navbar-menu.is-active .navbar-item.is-active {
+  border-left-color: $green;
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-bottom-width: 0;
+}
+
+.navbar-brand .left-burger {
+  align-items: flex-start;
+  margin-left: 0;
+}
+
+.navbar-brand .navbar-item {
+  margin: 0 auto;
+}

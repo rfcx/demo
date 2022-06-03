@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RFCx Demo</title>
+  <link rel="stylesheet" href="css/brand.css">
+  <link rel="stylesheet" href="css/button-panel.css">
+</head>
+
+<body>
+  <nav class="navbar" id="navbar-unauth" role="navigation" aria-label="unauth navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <img src="assets/rfcx-logo.png">
+        <span class="navbar-title">Rainforest Connection</span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item is-active">
+          Threat Simulator
+        </a>
+
+        <a class="navbar-item">
+          Guardian App&nbsp;
+          <svg height="1.2em" width="1.2em" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-xs ml-1"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        </a>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <div class="button-panel fill">
+    <div class="button is-large is-fullwidth" onclick="document.getElementById('audio-chainsaw').play()">
+      <span class="icon"><img src="https://static.rfcx.org/img/guardian/ic_chainsaw.svg" style="width:36px;height:36px"></span>
+      <span>Chainsaw</span>
+    </div>
+    <div class="button is-large is-fullwidth" onclick="document.getElementById('audio-truck').play()">
+      <span class="icon"><img src="https://static.rfcx.org/img/guardian/ic_vehicle.svg" style="width:36px;height:36px"></span>
+      <span>Truck</span>
+    </div>
+    <div class="button is-large is-fullwidth" onclick="document.getElementById('audio-dogback').play()">
+      <span class="icon"><img src="https://static.rfcx.org/img/guardian/ic_dog_bark.svg" style="width:36px;height:36px"></span>
+      <span>Dog Bark</span>
+    </div>
+    <div class="button is-large is-fullwidth" onclick="['audio-chainsaw','audio-truck','audio-dogback'].forEach(id => document.getElementById(id).pause())">
+      <span class="icon"><svg width="36px" height="36px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon fill="#979faa" points="18.41 2.36 12.05 8.73 5.69 2.36 2.86 5.19 9.22 11.56 2.86 17.92 5.69 20.75 12.05 14.38 18.41 20.75 21.24 17.92 14.88 11.56 21.24 5.19 18.41 2.36"/></svg></span>
+      <span>Clear</span>
+    </div>
+  </div>
+
+  <div style="display:none">
+    <audio id="audio-chainsaw">
+      <source src="assets/audio/chainsaw.aac" type="audio/aac">
+    </audio>
+    <audio id="audio-truck">
+      <source src="assets/audio/truck.aac" type="audio/aac">
+    </audio>
+    <audio id="audio-dogback">
+      <source src="assets/audio/dogbark.aac" type="audio/aac">
+    </audio>
+  </div>
+
+</body>
+
+</html>
