@@ -1,5 +1,8 @@
-name: Deploy to Firebase Hosting on PR
-'on': push
+name: Deploy to Firebase Hosting
+on:
+  push:
+    branches:
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -10,3 +13,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_RFCX_DEMO }}'
           projectId: rfcx-demo
+          channelId: live
